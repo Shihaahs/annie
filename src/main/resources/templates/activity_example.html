@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width,viewport-fit=cover,user-scalable=no,initial-scale=0.5,maximum-scale=0.5,minimum-scale=0.5"/>
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 100px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .GenerateImg {
+            background-color: white;
+            width: 100%;
+            position: relative;
+            padding: 0.35rem 0;
+        }
+
+        .GenerateImg-title {
+            padding: 0 0.42rem;
+            padding-bottom: 0.35rem;
+            overflow: hidden;
+        }
+
+        .GenerateImg-title-left {
+            border: 0.014rem solid #f6f7f6;
+            border-radius: 0.028rem;
+            width: 0.84rem;
+            height: 0.84rem;
+            position: relative;
+            float: left;
+        }
+
+        .GenerateImg-title-left > img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .GenerateImg-title-right {
+            margin-left: 1.238rem;
+        }
+
+        .GenerateImg-title-right > div:first-child {
+            font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 0.336rem;
+            color: #333333;
+            word-break: break-all;
+        }
+
+        .GenerateImg-title-right > div:last-child {
+            font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 0.252rem;
+            color: #f12300;
+        }
+
+        .GenerateImg-multiImgList {
+            padding: 0 0.126rem;
+            text-align: center;
+        }
+
+        .GenerateImg-multiImgList > div {
+            position: relative;
+            width: 46%;
+            height: 0;
+            padding-bottom: 46%;
+            margin-bottom: 4%;
+            display: inline-block;
+        }
+
+        .GenerateImg-multiImgList > div > img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .GenerateImg-oneImgList {
+            padding: 0 0.18rem;
+            padding-bottom: 0.18rem;
+        }
+
+        .GenerateImg-oneImgList > div {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+        }
+
+        .GenerateImg-oneImgList > div > img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .GenerateImg-footer {
+            padding: 0.42rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0;
+            overflow: hidden;
+        }
+
+        .GenerateImg-footer-left {
+            text-align: left;
+            float: left;
+        }
+
+        .GenerateImg-footer-left > div:first-child {
+            font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 0.294rem;
+            color: #333333;
+        }
+
+        .GenerateImg-footer-left > div:last-child {
+            font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 0.294rem;
+            color: #f12300;
+            margin-top: 0.2rem;
+            text-align: left;
+        }
+
+        .GenerateImg-footer-right {
+            width: 1.8rem;
+            float: right;
+            text-align: center;
+        }
+
+        .GenerateImg-footer-right > div:first-child {
+            width: 1.6rem;
+            height: 1.6rem;
+            margin: 0 auto;
+        }
+
+        .GenerateImg-footer-right > div:first-child > img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .GenerateImg-footer-right > div:last-child {
+            font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 0.21rem;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+<div class="GenerateImg" ref="GenerateImg">
+    <div class="GenerateImg-title">
+        <div class="GenerateImg-title-left">
+            <img src="/brand.jpg"/>
+        </div>
+        <div class="GenerateImg-title-right">
+            <div>乌尔提供原创PS服务</div>
+            <div>共 2 款商品</div>
+        </div>
+    </div>
+    <div class="GenerateImg-multiImgList">
+        <img src="http://devdev.oss-cn-shanghai.aliyuncs.com/1b90dfd4c45ed0ef8ad78adb7445c203690fceb9_1554367041112_29.jpg"/>
+        <img src="http://devdev.oss-cn-shanghai.aliyuncs.com/1b90dfd4c45ed0ef8ad78adb7445c203690fceb9_1554367041112_29.jpg"/>
+    </div>
+    <div class="GenerateImg-footer">
+        <div class="GenerateImg-footer-left">
+            <div>每日限时折扣品牌团</div>
+            <div>
+                <div>结束时间</div>
+                <div >2019-08-12 14:32:45</div>
+            </div>
+        </div>
+        <div class="GenerateImg-footer-right">
+            <div ref="qrcode"><img src="/wuer.jpeg"/></div>
+            <div>长按识别二维码</div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
