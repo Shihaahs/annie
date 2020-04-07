@@ -34,7 +34,8 @@ public class DateUtil {
         if (tl == null) {
             synchronized (lock) {
                 tl = sdfMap.get(pattern);
-                if (tl == null) { tl = ThreadLocal.withInitial(() -> new SimpleDateFormat(pattern));
+                if (tl == null) {
+                    tl = ThreadLocal.withInitial(() -> new SimpleDateFormat(pattern));
                     sdfMap.put(pattern, tl);
                 }
             }
@@ -106,6 +107,7 @@ public class DateUtil {
     public static Date toDate(LocalDate date) {
         return Date.from(date.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
     }
+
     public static LocalDateTime toLocalDateTime(Date date) {
         return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
     }
@@ -117,6 +119,5 @@ public class DateUtil {
     public static String now() {
         return formatDate(new Date());
     }
-
 
 }
